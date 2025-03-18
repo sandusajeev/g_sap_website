@@ -8,7 +8,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 function App() {
   useEffect(() => {
-    // First Section Animations (Page Load)
+    
     gsap.fromTo(
       ".fade-text",
       { opacity: 0, y: 50 },
@@ -18,17 +18,17 @@ function App() {
     gsap.fromTo(
       ".image-slide", 
       {
-      x: 600, // Move from right
+      x: 600, 
       opacity: 0,
     },
     {
-      x:0, // Move from right
+      x:0, 
       opacity: 1,
       duration: 3,
       ease: "power3.out",
     } );
 
-    // Second Section Animation (Fade in on scroll)
+    
     gsap.fromTo(
       ".left-div",
       { x: "-100%", opacity: 0 },
@@ -61,7 +61,7 @@ function App() {
       }
     );
 
-    // Reverse animation when scrolling back up
+    
     ScrollTrigger.create({
       trigger: ".scroll-section",
       start: "top 100%",
@@ -72,7 +72,7 @@ function App() {
       },
     });
 
-    // Third Section Animation (Fade in and out effect)
+   
     gsap.fromTo(
       ".t_text",
       { opacity: 0 },
@@ -100,7 +100,7 @@ function App() {
         </div>
       </nav>
 
-      {/* First Section */}
+      
       <section className="first-section">
         <div className="container">
           <div className="row d-flex align-items-center">
@@ -131,7 +131,7 @@ function App() {
       </div>
     </section>
 
-      {/* Third Section */}
+    
       <section className="fade-out-section">
         <div className="container">
           <h4 className="t_text">Ferrari car price starts at Rs 3.50 Crore for the cheapest model which is Portofino and the price of most expensive model, which is Purosangue SUV starts at Rs 10.50 Crore. Ferrari offers 6 car models in India, including 1 car in SUV category, 1 car in Convertible category, 4 cars in Coupe category.</h4>
